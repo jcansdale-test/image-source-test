@@ -20,7 +20,7 @@ jobs:
         run: |
           echo 'FROM alpine' > Dockerfile
           echo 'ENTRYPOINT ["echo", "Hello from ${{ github.repository }}!"]' >> Dockerfile
-          echo 'LABEL org.opencontainers.image.source=${{ github.server_url }}/${{ github.repository }}x' >> Dockerfile
+          echo 'LABEL org.opencontainers.image.source=${{ github.server_url }}/${{ github.repository }}' >> Dockerfile
           echo 'LABEL org.opencontainers.image.description "This image was built from commit ${{ github.sha }}"' >> Dockerfile
 
       - run: cat Dockerfile
